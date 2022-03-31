@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-pipeline
+  namespace: pipeline-ns
+spec:
+  selector:
+    app: deployment-pipeline
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
