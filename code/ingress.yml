@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+ name: ingress-pipeline
+ namespace: pipeline-ns
+spec:
+ rules:
+ - host: pipeline.maheswargoud.xyz
+   http:
+     paths:
+     - path:
+       backend:
+         serviceName: svc-pipeline
+         servicePort: 80
